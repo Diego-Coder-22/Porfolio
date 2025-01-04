@@ -391,7 +391,7 @@ header {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
     header {
         background: var(--mob-color);
         position: sticky;
@@ -523,7 +523,7 @@ header {
     }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 480px) {
     header {
         nav {
             .logo {
@@ -866,8 +866,8 @@ header {
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); // 3 columnas de igual tamaño
-            gap: 30px; // Espacio entre las cards
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px;
             justify-items: center;
             max-width: $max-width;
             margin: 0 auto;
@@ -879,20 +879,19 @@ header {
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 text-align: center;
-                overflow: hidden; // Para asegurar que las imágenes no se salgan de la tarjeta
+                overflow: hidden;
 
                 &:hover {
                     transform: translateY(-10px);
                     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
                 }
 
-                // Estilos para la imagen
                 .project-image {
                     width: 100%;
-                    height: 200px; // Tamaño fijo para las imágenes
-                    object-fit: cover; // Para asegurarnos de que la imagen cubra el espacio sin distorsionarse
-                    border-radius: 8px; // Opcional: redondear las esquinas de la imagen
-                    margin-bottom: 20px; // Separación entre la imagen y el contenido de la tarjeta
+                    height: 200px; 
+                    object-fit: cover;
+                    border-radius: 8px; 
+                    margin-bottom: 20px;
                 }
 
                 .project-title {
@@ -943,39 +942,38 @@ header {
     }
 }
 
-// Responsividad para pantallas medianas (tablets)
+// Responsive
 @media screen and (max-width: 1024px) {
     #project {
         .container {
             .section-header {
                 .section-title {
-                    font-size: 3.5em; // Reducir el tamaño del título en pantallas más pequeñas
+                    font-size: 3.5em;
                 }
 
                 .section-subtitle {
-                    font-size: 1.1rem; // Reducir el subtítulo
+                    font-size: 1.1rem;
                 }
             }
 
             .project-grid {
-                grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas medianas
-                gap: 20px; // Reducir espacio entre las cards
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
         }
     }
 }
 
-// Responsividad para pantallas más pequeñas (smartphones)
 @media screen and (max-width: 767px) {
     #project {
         .container {
             .section-header {
                 .section-title {
-                    font-size: 3rem; // Reducir aún más el tamaño del título
+                    font-size: 3rem;
                 }
 
                 .section-subtitle {
-                    font-size: 1rem; // Reducir el subtítulo
+                    font-size: 1rem;
                 }
             }
 
@@ -991,27 +989,26 @@ header {
     }
 }
 
-// Responsividad para pantallas extra pequeñas (smartphones muy pequeños)
 @media screen and (max-width: 480px) {
     #project {
         .container {
             .section-header {
                 .section-title {
-                    font-size: 2.5rem; // Hacer el título más pequeño
+                    font-size: 2.5rem;
                 }
 
                 .section-subtitle {
-                    font-size: 0.9rem; // Hacer el subtítulo más pequeño
+                    font-size: 0.9rem;
                 }
             }
 
             .project-grid {
-                grid-template-columns: 1fr; // 1 columna en pantallas aún más pequeñas
-                gap: 10px; // Reducir aún más el espacio entre las cards
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
 
             .project-card {
-                padding: 10px; // Reducir el padding de las tarjetas
+                padding: 10px;
             }
         }
     }

@@ -328,7 +328,7 @@ header nav .hamburger.active .bar {
     height: 400px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   header {
     background: var(--mob-color);
     position: sticky;
@@ -416,7 +416,7 @@ header nav .hamburger.active .bar {
     height: 350px;
   }
 }
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 480px) {
   header nav .logo a {
     font-size: 28px;
   }
