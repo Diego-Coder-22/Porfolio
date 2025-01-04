@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -92,24 +93,26 @@ header nav .list-darkmode-menu ul li a {
   color: var(--first);
   font-size: 18px;
   font-weight: 500;
-  transition: 0.3s linear;
-  margin-bottom: 40px;
+  transition: color 0.3s linear;
 }
 header nav .list-darkmode-menu ul li a:hover {
   color: var(--color);
 }
+header nav .list-darkmode-menu ul li a:hover::after {
+  width: 0%; /* Expande completamente el subrayado */
+}
 header nav .list-darkmode-menu ul li a:hover::before {
-  width: 100%;
+  width: 100%; /* Expande completamente el subrayado */
 }
 header nav .list-darkmode-menu ul li a::before {
   content: "";
   position: absolute;
-  bottom: -7px;
+  bottom: -5px; /* Ajustado para alinear con el texto */
   left: 0;
-  width: 100%;
-  height: 2.5px;
+  width: 0;
+  height: 2px;
   background: var(--color);
-  transition: 0.3s linear;
+  transition: width 0.3s ease; /* La animación ocurre al cambiar el ancho */
 }
 header nav .mode {
   color: var(--text-color);
@@ -354,6 +357,7 @@ header nav .hamburger.active .bar {
     left: 0%;
   }
   header nav .list-darkmode-menu .hamburger {
+    font-weight: 100;
     display: block;
   }
   .home {
@@ -635,6 +639,135 @@ header nav .hamburger.active .bar {
   animation-play-state: paused;
 }
 
+#project {
+  background-color: var(--first);
+  padding: 60px 0;
+}
+#project .container .section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#project .container .section-header .section-title {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--bg-color);
+}
+#project .container .section-header .section-subtitle {
+  font-size: 1.2rem;
+  color: var(--bg-color);
+}
+#project .container .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#project .container .project-grid .project-card {
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+#project .container .project-grid .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#project .container .project-grid .project-card .project-image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+#project .container .project-grid .project-card .project-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--first);
+}
+#project .container .project-grid .project-card .project-description {
+  font-size: 1rem;
+  color: var(--first);
+  margin-bottom: 20px;
+}
+#project .container .project-grid .project-card .btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+}
+#project .container .project-grid .project-card .btn-wrap a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#project .container .project-grid .project-card .btn-wrap .btn-accent {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: var(--color);
+  background: transparent;
+  border: 2px solid var(--color);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#project .container .project-grid .project-card .btn-wrap .btn-accent:hover {
+  color: #fff;
+  background: var(--color);
+  transform: translateY(-7px);
+}
+
+@media screen and (max-width: 1024px) {
+  #project .container .section-header .section-title {
+    font-size: 3.5em;
+  }
+  #project .container .section-header .section-subtitle {
+    font-size: 1.1rem;
+  }
+  #project .container .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #project .container .section-header .section-title {
+    font-size: 3rem;
+  }
+  #project .container .section-header .section-subtitle {
+    font-size: 1rem;
+  }
+  #project .container .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  #project .container .project-card {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #project .container .section-header .section-title {
+    font-size: 2.5rem;
+  }
+  #project .container .section-header .section-subtitle {
+    font-size: 0.9rem;
+  }
+  #project .container .project-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  #project .container .project-card {
+    padding: 10px;
+  }
+}
 #contact {
   background-color: var(--bg-color);
   padding: 145px 0 100px;
@@ -683,7 +816,7 @@ header nav .hamburger.active .bar {
 
 #footer-bottom {
   background-color: var(--first);
-  padding: 50px 0;
+  padding: 30px 0;
 }
 #footer-bottom .copyright p {
   color: var(--bg-color);
