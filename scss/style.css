@@ -681,11 +681,21 @@ header nav .hamburger.active .bar {
 }
 #project .container .project-grid .project-card .project-image {
   width: 100%;
-  height: 200px;
+  height: auto;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+  transition: object-position 4s, transform 0.3s;
+  transition: object-position 4s, transform 0.3s, -o-object-position 4s;
+}
+#project .container .project-grid .project-card .project-image:hover {
+  -o-object-position: bottom;
+     object-position: bottom; /* Alinea la imagen al fondo del contenedor */
+  transform: scale(1.1); /* Realiza el zoom */
 }
 #project .container .project-grid .project-card .project-title {
   font-size: 1.6rem;
