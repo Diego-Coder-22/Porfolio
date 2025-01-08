@@ -674,14 +674,14 @@ header nav .hamburger.active .bar {
   background-color: var(--bg-color);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   overflow: hidden;
 }
 #project .container .project-grid .project-card:hover {
-  transform: translateY(-10px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-9px) scale(1.05);
+  border: 1px solid var(--color);
+  box-shadow: 0 0 10px var(--color);
 }
 #project .container .project-grid .project-card .project-image {
   width: 100%;
