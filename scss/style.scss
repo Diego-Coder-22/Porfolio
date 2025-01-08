@@ -7,6 +7,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+body {
+    cursor: url('/img/Favicon.png'), auto;
+}
+
 $primary-color: #ff6347;
 $secondary-color: #4e4e4e;
 $card-bg-color: #fff;
@@ -882,7 +886,7 @@ header {
                 overflow: hidden;
 
                 &:hover {
-                    transform: translateY(-10px);
+                    transform: translateY(-10px) scale(1.1);
                     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
                 }
 
@@ -899,7 +903,6 @@ header {
                 
                 .project-image:hover {
                     object-position: bottom; /* Alinea la imagen al fondo del contenedor */
-                    transform: scale(1.1); /* Realiza el zoom */
                 }
 
                 .project-title {

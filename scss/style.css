@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  cursor: url("/img/Favicon.png"), auto;
+}
+
 :root {
   --text-color: #fff;
   --color: #fba820;
@@ -676,7 +680,7 @@ header nav .hamburger.active .bar {
   overflow: hidden;
 }
 #project .container .project-grid .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 #project .container .project-grid .project-card .project-image {
@@ -695,7 +699,6 @@ header nav .hamburger.active .bar {
 #project .container .project-grid .project-card .project-image:hover {
   -o-object-position: bottom;
      object-position: bottom; /* Alinea la imagen al fondo del contenedor */
-  transform: scale(1.1); /* Realiza el zoom */
 }
 #project .container .project-grid .project-card .project-title {
   font-size: 1.6rem;
