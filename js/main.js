@@ -87,3 +87,22 @@ sr.reveal(".bar", {
     duration:2500, origin:"left", distance:"100px", delay:300,
 });
 
+// Selecciona el botón
+const buttonToTop = document.querySelector('.button-to-top');
+
+// Evento para mostrar/ocultar el botón
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Aparece después de 300px
+        buttonToTop.classList.add('visible');
+    } else {
+        buttonToTop.classList.remove('visible');
+    }
+});
+
+// Función para volver al inicio
+buttonToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

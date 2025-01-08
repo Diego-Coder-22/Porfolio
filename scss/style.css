@@ -28,6 +28,30 @@ body.dark-mode {
   --mob-color: #eae6e6;
 }
 
+.button-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 2px solid var(--color);
+  border-radius: 7px;
+  color: var(--color);
+  background: transparent;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0; /* Oculto por defecto */
+  visibility: hidden;
+}
+.button-to-top:hover {
+  background: var(--color);
+  color: #fff;
+}
+.button-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .container-header {
   max-width: 1250px;
   width: 100%;
