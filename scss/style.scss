@@ -215,7 +215,7 @@ header {
                 border: none;
                 outline: none;
                 background: none;
-                scale: 0.9;
+                scale: 0.7;
                 display:none;
 
                 .bar,
@@ -224,18 +224,18 @@ header {
                     content:'';
                     display: block;
                     width: 100%;
-                    height: 9px;
+                    height: 7px;
                     background: var(--first);
-                    margin: 6px,0;
+                    margin: 4px 0;
                     transition: 0.4s;
                 }
 
                 &.active::before {
-                    transform: rotate (-45deg) translate (-8px,5px);
+                    transform: rotate(-45deg) translate(-8px, 7px);
                 }
 
                 &.active::after{
-                    transform: rotate (45deg) translate (-8px,-5px);
+                    transform: rotate(45deg) translate(-8px, -7px);
                 }
 
                 &.active .bar {
