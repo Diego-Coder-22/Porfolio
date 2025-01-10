@@ -1114,6 +1114,82 @@ header {
         }
     }
 
+// Responsive
+    @media screen and (max-width: 1024px) {
+        #contact {
+          .container {
+            .row {
+              .inner-content {
+                h2 {
+                  font-size: 3.5em; // Reducir el tamaño de fuente
+                }
+      
+                p {
+                  width: 60%; // Aumentar el ancho del párrafo para más espacio
+                }
+      
+                .btn {
+                  gap: 20px; // Reducir el espacio entre los botones
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      @media screen and (max-width: 767px) {
+        #contact {
+          padding: 80px 0; // Reducir el padding en pantallas más pequeñas
+      
+          .container {
+            .row {
+              .inner-content {
+                h2 {
+                  font-size: 2.5em; // Reducir el tamaño del título
+                }
+      
+                p {
+                  width: 80%; // Ajustar el tamaño del párrafo para pantallas más pequeñas
+                  font-size: 1.1em; // Reducir el tamaño del texto
+                  margin-bottom: 30px; // Reducir el margen inferior
+                }
+      
+                .btn {
+                  gap: 15px; // Reducir el espacio entre botones
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        #contact {
+          padding: 60px 0; // Reducir el padding aún más en pantallas pequeñas
+      
+          .container {
+            .row {
+              .inner-content {
+                h2 {
+                  font-size: 2.2em; // Hacer el título más pequeño
+                }
+      
+                p {
+                  width: 90%; // Hacer que el párrafo ocupe casi todo el ancho
+                  font-size: 1em; // Reducir aún más el tamaño del texto
+                  margin-bottom: 20px; // Ajustar margen inferior
+                }
+      
+                .btn {
+                  gap: 10px; // Reducir el espacio entre los botones
+                  flex-direction: column; // Asegurar que los botones se apilen
+                }
+              }
+            }
+          }
+        }
+      }
+
 // Footer
 
 #footer-bottom {
