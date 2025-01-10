@@ -7,23 +7,23 @@ const navList = document.querySelector("nav ul");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navList.classList.toggle("active");
-    const logoImg = document.querySelector(".logo img"); // Selecciona el logo
+    const logoImg = document.querySelector(".logo img");
 });
 
 // Dark - Light Mod
 
 const darkModeButton = document.getElementById("darkModeButton");
 const body = document.body;
-const logoImg = document.querySelector(".logo img"); // Selecciona el logo
+const logoImg = document.querySelector(".logo img");
 
 const enebleDarkMode = () => {
     body.classList.add("dark-mode");
-    logoImg.src = "img/Logo-dark.png"; // Cambia la imagen del logo al modo nocturno
+    logoImg.src = "img/Logo-dark.png";
 }
 
 const disableDarkMode = () => {
     body.classList.remove("dark-mode");
-    logoImg.src = "img/Logo.png"; // Cambia la imagen del logo al modo normal
+    logoImg.src = "img/Logo.png";
 }
 
 darkModeButton.addEventListener("change", () => {
@@ -32,7 +32,17 @@ darkModeButton.addEventListener("change", () => {
     } else {
         disableDarkMode();
     }
-});
+})
+
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    darkModeButton.checked = true;
+    enableDarkMode();
+} else {
+    darkModeButton.checked = false;
+    disableDarkMode();
+};
 
 //Multiple Text
 
