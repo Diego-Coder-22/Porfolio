@@ -78,13 +78,13 @@ sr.reveal(".left-p", {
     duration:2500, origin:"left", distance:"150px", delay:600,
 });
 sr.reveal(".social", {
-    duration:2100, origin:"bottom", distance:"160px", delay:400, interval: 100,
+    duration:2100, origin:"bottom", distance:"120px", delay:300,
 });
 sr.reveal(".social a", {
-    duration:2100, origin:"bottom", distance:"160px", delay:400, interval: 200,
+    duration:2100, origin:"bottom", ddistance:"120px", delay:300,
 });
 sr.reveal(".social a i", {
-    duration:2100, origin:"bottom", distance:"160px", delay:400, interval: 300,
+    duration:2100, origin:"bottom", distance:"120px", delay:300,
 });
 sr.reveal(".btn", {
     duration:2000, origin:"bottom", distance:"120px", delay:300,
