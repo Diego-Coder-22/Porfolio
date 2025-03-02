@@ -687,7 +687,7 @@ header nav .hamburger.active .bar {
   grid-template-columns: 1fr;
   gap: 30px;
   justify-items: center;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 #project .container .project-grid .project-card {
@@ -710,7 +710,7 @@ header nav .hamburger.active .bar {
 }
 #project .container .project-grid .project-card .project-image {
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
   height: auto;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
@@ -733,24 +733,38 @@ header nav .hamburger.active .bar {
   justify-content: flex-start;
   align-items: flex-start;
   flex: 1;
-  margin-bottom: 20px;
-}
-#project .container .project-grid .project-card .project-info .project-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--first);
-}
-#project .container .project-grid .project-card .project-info .project-description {
-  font-size: 1rem;
-  color: var(--first);
   margin-bottom: 15px;
 }
+#project .container .project-grid .project-card .project-info .project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-style: italic;
+  color: var(--first);
+}
+#project .container .project-grid .project-card .project-info .project-title-description {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--first);
+  margin-bottom: 10px;
+}
+#project .container .project-grid .project-card .project-info .project-description {
+  font-size: 0.9rem;
+  color: var(--first);
+  margin-bottom: 10px;
+}
+#project .container .project-grid .project-card .project-info .project-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 5px;
+  color: var(--first);
+}
 #project .container .project-grid .project-card .project-info .project-skills {
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  row-gap: 0.5rem;
-  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
 }
 #project .container .project-grid .project-card .project-info .project-skills .skill {
   padding: 0;
