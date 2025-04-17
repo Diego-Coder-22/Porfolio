@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Diego Fernández | Portfolio</title>
-    <link rel="shortcut icon" href="img/Favicon.png" type="image/png" sizes="36x36" >
+    <meta name="description" content="Portfolio profesional de Diego Fernández, desarrollador frontend especializado en HTML, CSS, JavaScript, React y diseño gráfico.">
+    <meta property="og:title" content="Diego Fernández | Portfolio">
+    <meta property="og:description" content="Descubre los proyectos y habilidades de Diego Fernández, desarrollador frontend creativo y apasionado por el diseño.">
+    <meta property="og:url" content="https://porfolio-diego-projects.vercel.app/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="img/Favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/Favicon.png">
 
     <link rel="stylesheet" type="text/css" href="./scss/style.css">
     <script src="js/scrollreveal.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="alternate" hreflang="es" href="https://porfolio-diego-projects.vercel.app/" />
+
 </head>
 <body>
     <header>
         <div class="container-header">
-            <nav>
+            <nav aria-label="Navegación principal">
                 <div class="logo">
                     <a href="#">
-                        <img src="img/Logo.png" alt="logo">
+                        <img src="img/Logo.png" alt="Logo del portfolio de Diego Fernández">
                     </a>
                 </div>
                 <div class="list-darkmode-menu menu-btn">
@@ -58,7 +68,7 @@
                 </div>
                 <div class="right">
                     <div class="profile">
-                        <img src="img/Diego Fernandez Developer-01.png" alt="">
+                        <img src="img/Diego Fernandez Developer-01.png" alt="Foto de Diego Fernández - Desarrollador frontend">
                     </div>
                 </div>
             </div>
@@ -140,7 +150,7 @@
                                         </div>
 
                                         <div class="progress">
-                                            <h3>Ilustrator <span>90%</span></h3>
+                                            <h3>Illustrator <span>90%</span></h3>
                                             <div class="bar"><span></span></div>
                                         </div>
 
@@ -159,16 +169,16 @@
                         </div>
                         <div class="logos">
                             <div class="logos-slide">
-                                <img src="img/HTML5-01.svg" alt="Imagen 1" class="colored">
-                                <img src="img/CSS3.svg" alt="Imagen 1" class="colored">
-                                <img src="img/Sass.svg" alt="Imagen 1" class="colored">
-                                <img src="img/Bootstrap.svg" alt="Imagen 1" class="colored">
-                                <img src="img/GitHub.svg" alt="Imagen 1" class="colored">
-                                <img src="img/JavaScript.svg" alt="Imagen 1" class="colored">
-                                <img src="img/React.svg" alt="Imagen 1" class="colored">
-                                <img src="img/Photoshop.svg" alt="Imagen 1" class="colored">
-                                <img src="img/Illustrator.svg" alt="Imagen 1" class="colored">
-                                <img src="img/InDesign.svg" alt="Imagen 1" class="colored">
+                                <img src="img/HTML5-01.svg" alt="Logo de HTML5" class="colored">
+                                <img src="img/CSS3.svg" alt="Logo de CSS3" class="colored">
+                                <img src="img/Sass.svg" alt="Logo de Sass" class="colored">
+                                <img src="img/Bootstrap.svg" alt="Logo de Bootstrap" class="colored">
+                                <img src="img/GitHub.svg" alt="Logo de GitHub" class="colored">
+                                <img src="img/JavaScript.svg" alt="Logo de JavaScript" class="colored">
+                                <img src="img/React.svg" alt="Logo de React" class="colored">
+                                <img src="img/Photoshop.svg" alt="Logo de Photoshop" class="colored">
+                                <img src="img/Illustrator.svg" alt="Logo de Illustrator" class="colored">
+                                <img src="img/InDesign.svg" alt="Logo de InDesign" class="colored">
                             </div>
                         </div>
                     </div>
@@ -186,7 +196,7 @@
         <div class="project-grid">
             <!-- Card 1 -->
             <div class="project-card">
-                <img src="./img/Porfolio_.png" alt="Imagen del Proyecto 1" class="project-image">
+                <img src="./img/Porfolio_.png" loading="lazy" alt="Vista previa del sitio web personal de Diego Fernández" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">Titulo:</h3>
                     <p class="project-title-description">Portfolio Personal</p>
@@ -206,7 +216,7 @@
             </div>
             <!-- Card 2 -->
             <div class="project-card">
-                <img src="./img/JPWEB.png" alt="Imagen del Proyecto 2" class="project-image">
+                <img src="./img/JPWEB.png" loading="lazy" alt="Vista previa del sitio web JP Team Jiu Jitsu desarrollado por Diego Fernández" class="project-image">
                 <div class="project-info">
                     <h3 class="project-title">Titulo:</h3>
                     <p class="project-title-description">Jp Team</p>
@@ -261,7 +271,7 @@
 
 </main>
 <!-- Botón para volver al inicio -->
-<button class="button-to-top" onclick="scrollToTop()">⬆</button>
+<button class="button-to-top" onclick="scrollToTop()" aria-label="Volver al inicio">⬆</button>
         <div id="footer-bottom">
             <div class="container">
                 <div class="row">
