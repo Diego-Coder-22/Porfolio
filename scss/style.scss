@@ -104,6 +104,7 @@ header {
 
         .logo {
             z-index: 1;
+            
         }
 
         .list-darkmode-menu {
@@ -561,7 +562,10 @@ header {
         nav {
             .logo {
                 a {
-                    font-size: 28px;
+                    font-size: 20px;
+                    img{
+                        width: 90%;
+                    }
                 }
             }
         }
