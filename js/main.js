@@ -7,7 +7,13 @@ const navList = document.querySelector("nav ul");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navList.classList.toggle("active");
-    const logoImg = document.querySelector(".logo img");
+});
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navList.classList.remove("active");
+    });
 });
 
 // Dark - Light Mod
@@ -16,7 +22,7 @@ const darkModeButton = document.getElementById("darkModeButton");
 const body = document.body;
 const logoImg = document.querySelector(".logo img");
 
-const enebleDarkMode = () => {
+const enableDarkMode = () => {
     body.classList.add("dark-mode");
     logoImg.src = "img/Logo-dark.png";
 }
@@ -28,7 +34,7 @@ const disableDarkMode = () => {
 
 darkModeButton.addEventListener("change", () => {
     if (darkModeButton.checked) {
-        enebleDarkMode();
+        enableDarkMode();
     } else {
         disableDarkMode();
     }
@@ -81,7 +87,7 @@ sr.reveal(".social", {
     duration:2100, origin:"bottom", distance:"120px", delay:300,
 });
 sr.reveal(".social a", {
-    duration:2100, origin:"bottom", ddistance:"120px", delay:300,
+    duration:2100, origin:"bottom", distance:"120px", delay:300,
 });
 sr.reveal(".social a i", {
     duration:2100, origin:"bottom", distance:"120px", delay:300,
