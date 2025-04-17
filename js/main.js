@@ -86,9 +86,6 @@ sr.reveal(".social a", {
 sr.reveal(".social a i", {
     duration:2100, origin:"bottom", distance:"120px", delay:300,
 });
-sr.reveal(".btn", {
-    duration:2000, origin:"bottom", distance:"120px", delay:300,
-});
 sr.reveal(".profile", {
     duration:2500, origin:"right", distance:"260px", delay:300,
 });
