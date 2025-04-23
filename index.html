@@ -21,6 +21,15 @@
 
 </head>
 <body>
+    
+    <div class="loading" aria-hidden="true">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+    </div>
+
     <header>
         <div class="container-header">
             <nav aria-label="Navegación principal">
@@ -259,7 +268,7 @@
         <div class="container">
             <div class="row">
                 <div class="inner-content">
-                    <h2>Trabajemos juntos</h2>
+                    <h2 class="work-title">Trabajemos juntos</h2>
                     <p>Estoy dispuesto a escucharte. <br>Tienes algún proyecto que te gustaria hacer? <br>Puedes contactarme.</p>
                     <div class="btn">
                             <a href="mailto: diego.fnicolini@gmail.com" class="btn-accent">Contactame</a>
@@ -282,8 +291,9 @@
                             </div>
                             <div class="social-footer">
                                 <ul>
-                                    <li><a href="https://www.linkedin.com/in/diego-fernandez-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://github.com/Diego-Coder-22" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/diego-fernandez-dev/" target="_blank"><i aria-label="Linkedin" class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://github.com/Diego-Coder-22" target="_blank"><i aria-label="GitHub" class="fa-brands fa-github"></i></a></li>
+                                    <li><a href="mailto: diego.fnicolini@gmail.com" target="_blank"><i aria-label="Correo electrónico" class="fa-solid fa-envelope"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -291,7 +301,13 @@
                 </div>
             </div>
         </div>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="js/main.js"></script>
+<!-- Scripts -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+
+<script src="js/my-gsap-v14.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
