@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
           amount: 0.1,
           from: "center",
         },
-        duration: 0.5,
+        duration: .5,
       });
   
       gsap.to(".loading", {
         opacity: 0,
         pointerEvents: "none",
         delay: 1,
-        duration: 0.5,
+        duration: .5,
         onComplete: () => {
           document.querySelector(".loading").style.display = "none";
         },
