@@ -45,7 +45,7 @@ body.dark-mode {
     outline: none;
     cursor: pointer;
     transition: 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0; /* Oculto por defecto */
+    opacity: 0;
     visibility: hidden;
 
     &:hover {
@@ -1356,4 +1356,48 @@ header {
             }
         }
     }
+}
+
+@media screen and (max-width: 480px) {
+    #footer-bottom {
+        .grid {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 1rem;
+        }
+    
+        .copyright {
+          p {
+            font-size: 0.9rem;
+            margin: 0;
+          }
+        }
+    
+        .social-footer {
+          ul {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+    
+            li {
+              a {
+                font-size: 1.2rem;
+                color: var(--bg-color);
+                transition: color 0.3s ease;
+                border: 1px solid var(--bg-color);
+    
+                &:hover {
+                    color: #fff;
+                    background: var(--color);
+                }
+              }
+            }
+          }
+        }
+      }
 }
