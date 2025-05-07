@@ -53,7 +53,7 @@ if (savedTheme === "dark") {
 //Multiple Text
 
 const typed = new Typed(".multiple",{
-    strings:["Desarrollador Frontend", "Estudiante Backend", "Diseñador Gráfico"],
+    strings:["Desarrollador Frontend", "Desarrollador Backend", "Diseñador Gráfico", "Desarrollador FullStack" ],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
