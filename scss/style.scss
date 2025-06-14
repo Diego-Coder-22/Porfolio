@@ -111,153 +111,219 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+  
     nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logo {
+        z-index: 1;
+      }
+  
+      .list-darkmode-menu {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-        .logo {
-            z-index: 1;
-            
+        gap: 40px;
+  
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 35px;
+          font-size: 18px;
+          list-style: none;
+          z-index: 1;
+  
+          li {
+            position: relative;
+  
+            a {
+              position: relative;
+              text-decoration: none;
+              color: var(--first);
+              font-size: 18px;
+              font-weight: 500;
+              transition: color 0.3s linear;
+  
+              &:hover {
+                color: var(--color);
+  
+                &::after {
+                  width: 0%;
+                }
+  
+                &::before {
+                  width: 100%;
+                }
+              }
+  
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--color);
+                transition: width 0.3s ease;
+              }
+            }
+          }
         }
-
-        .list-darkmode-menu {
+  
+        .language-dropdown {
+          position: relative;
+          font-size: 14px;
+          color: var(--first);
+          cursor: pointer;
+          font-weight: 500;
+          user-select: none;
+  
+          button.language-current {
+            background: none;
+            border: none;
+            color: var(--color);
+            font-size: inherit;
+            font-weight: inherit;
+            padding: 6px 10px;
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 6px;
+            transition:none;
+          }
+  
+          button.language-current:hover {
+            color: var(--color);
+            cursor: pointer;
+          }
+  
+          ul.language-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-radius: 6px;
+            padding: 6px 0;
+            list-style: none;
+            min-width: 70px;
+            z-index: 10;
 
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 35px;
-                font-size: 18px;
-                list-style: none;
-                z-index: 1;
-
-                li {
-                    position: relative;
-
-                    a {
-                        position: relative;
-                        text-decoration: none;
-                        color: var(--first);
-                        font-size: 18px;
-                        font-weight: 500;
-                        transition: color 0.3s linear;
-
-                        &:hover {
-                            color: var(--color);
-
-                            &::after {
-                                width: 0%; /* Expande completamente el subrayado */
-                            }
-
-                            &::before {
-                                width: 100%; /* Expande completamente el subrayado */
-                            }
-                        }
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            bottom: -5px; /* Ajustado para alinear con el texto */
-                            left: 0;
-                            width: 0;
-                            height: 2px;
-                            background: var(--color);
-                            transition: width 0.3s ease; /* La animación ocurre al cambiar el ancho */
-                        }
-                    }
+            &.show {
+                display: block;
+              }
+        
+  
+            li {
+              a {
+                display: block;
+                padding: 6px 12px;
+                font-size: 14px;
+                color: var(--first);
+                text-decoration: none;
+                transition: none;
+  
+                &:hover {
+                color: var(--color);
                 }
+                &::before,
+                &::after {
+                display: none;
+                content: none;
+                }
+              }
             }
+          }
+  
+          &:hover ul.language-list {
+            display: block;
+          }
         }
-
-
-            .mode {
-                color: var(--text-color);
-                font-size: 24px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                user-select: none;
-
-                .fa-moon,
-                .fa-sun {
-                    position: absolute;
-                    animation: animate 0.5s;
-                }
-
-                .fa-sun {
-                    display: none;
-                }
-
-                input:checked ~ .fa-moon {
-                    display: none;
-                }
-
-                input:checked ~ .fa-sun {
-                    display: block;
-                }
-
-                input {
-                    position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                    height: 0;
-                    width: 0;
-                }
-
-            }
-
-            @keyframes animate {
-                0%{
-                    transform: rotate(-360deg) scale(0);
-                    opacity: 0;
-                }
-                75%{
-                    transform: rotate(25deg);
-                }
-            }
-
-            .hamburger {
-                position: relative;
-                width: 30px;
-                cursor: pointer;
-                appearance: none;
-                border: none;
-                outline: none;
-                background: none;
-                scale: 0.7;
-                display:none;
-
-                .bar,
-                &::after,
-                &::before {
-                    content:'';
-                    display: block;
-                    width: 100%;
-                    height: 7px;
-                    background: var(--first);
-                    margin: 4px 0;
-                    transition: 0.4s;
-                }
-
-                &.active::before {
-                    transform: rotate(-45deg) translate(-8px, 7px);
-                }
-
-                &.active::after{
-                    transform: rotate(45deg) translate(-8px, -7px);
-                }
-
-                &.active .bar {
-                    opacity: 0;
-                }
-            }
+      }
+  
+      .mode {
+        color: var(--text-color);
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+  
+        .fa-moon,
+        .fa-sun {
+          position: absolute;
+          animation: animate 0.5s;
         }
+  
+        .fa-sun {
+          display: none;
+        }
+  
+        input:checked ~ .fa-moon {
+          display: none;
+        }
+  
+        input:checked ~ .fa-sun {
+          display: block;
+        }
+  
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+      }
+  
+      @keyframes animate {
+        0% {
+          transform: rotate(-360deg) scale(0);
+          opacity: 0;
+        }
+        75% {
+          transform: rotate(25deg);
+        }
+      }
+  
+      .hamburger {
+        position: relative;
+        width: 30px;
+        cursor: pointer;
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        scale: 0.7;
+        display: none;
+  
+        .bar,
+        &::after,
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 7px;
+          background: var(--first);
+          margin: 4px 0;
+          transition: 0.4s;
+        }
+  
+        &.active::before {
+          transform: rotate(-45deg) translate(-8px, 7px);
+        }
+  
+        &.active::after {
+          transform: rotate(45deg) translate(-8px, -7px);
+        }
+  
+        &.active .bar {
+          opacity: 0;
+        }
+      }
     }
+  }
+  
 
 // Home
 

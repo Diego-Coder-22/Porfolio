@@ -16,49 +16,93 @@ document.querySelectorAll("nav ul li a").forEach(link => {
     });
 });
 
-// Dark - Light Mod
-
-const darkModeButton = document.getElementById("darkModeButton");
-const body = document.body;
 const logoImg = document.querySelector(".logo img");
 
-const enableDarkMode = () => {
-    body.classList.add("dark-mode");
-    logoImg.src = "img/Logo-dark.png";
-}
-
-const disableDarkMode = () => {
-    body.classList.remove("dark-mode");
-    logoImg.src = "img/Logo.png";
-}
-
-darkModeButton.addEventListener("change", () => {
-    if (darkModeButton.checked) {
-        enableDarkMode();
+function getBasePath() {
+    const path = window.location.pathname;
+    if (path.includes("/en/") || path.includes("/pt/")) {
+        return "../img/";
     } else {
-        disableDarkMode();
+        return "img/";
     }
-})
+}
 
+function updateLogoSrc(darkMode = false) {
+    const basePath = getBasePath();
+    logoImg.src = basePath + (darkMode ? "Logo-dark.png" : "Logo.png");
+}
 
+// Dark mode toggle
+darkModeButton.addEventListener("change", () => {
+    const isDark = darkModeButton.checked;
+    document.body.classList.toggle("dark-mode", isDark);
+    updateLogoSrc(isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+// Load saved theme
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-    darkModeButton.checked = true;
-    enableDarkMode();
+const isDark = savedTheme === "dark";
+darkModeButton.checked = isDark;
+document.body.classList.toggle("dark-mode", isDark);
+updateLogoSrc(isDark);
+
+
+
+const path = window.location.pathname;
+
+let stringsArray;
+
+if (path.includes("/en/")) {
+  // Si la URL tiene "/en/", cargamos inglés
+  stringsArray = [
+    "Frontend Developer",
+    "Backend Developer",
+    "Graphic Designer",
+    "FullStack Developer"
+  ];
+} else if (path.includes("/pt/")) {
+  // Si la URL tiene "/pt/", cargamos portugués
+  stringsArray = [
+    "Desenvolvedor Frontend",
+    "Desenvolvedor Backend",
+    "Designer Gráfico",
+    "Desenvolvedor FullStack"
+  ];
 } else {
-    darkModeButton.checked = false;
-    disableDarkMode();
-};
+  // Por defecto o español
+  stringsArray = [
+    "Desarrollador Frontend",
+    "Desarrollador Backend",
+    "Diseñador Gráfico",
+    "Desarrollador FullStack"
+  ];
+}
 
-//Multiple Text
+const typed = new Typed(".multiple", {
+  strings: stringsArray,
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
 
-const typed = new Typed(".multiple",{
-    strings:["Desarrollador Frontend", "Desarrollador Backend", "Diseñador Gráfico", "Desarrollador FullStack" ],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true,
-})
+// Language dropdown toggle (para mobile)
+const languageDropdown = document.querySelector(".language-dropdown");
+const languageButton = languageDropdown?.querySelector(".language-current");
+const languageList = languageDropdown?.querySelector(".language-list");
+
+languageButton?.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evita que se cierre al hacer click dentro
+    languageList.classList.toggle("show");
+});
+
+// Cerrar al hacer click fuera
+document.addEventListener("click", (e) => {
+    if (!languageDropdown.contains(e.target)) {
+        languageList?.classList.remove("show");
+    }
+});
 
 //slide
 

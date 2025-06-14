@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -135,20 +134,78 @@ header nav .list-darkmode-menu ul li a:hover {
   color: var(--color);
 }
 header nav .list-darkmode-menu ul li a:hover::after {
-  width: 0%; /* Expande completamente el subrayado */
+  width: 0%;
 }
 header nav .list-darkmode-menu ul li a:hover::before {
-  width: 100%; /* Expande completamente el subrayado */
+  width: 100%;
 }
 header nav .list-darkmode-menu ul li a::before {
   content: "";
   position: absolute;
-  bottom: -5px; /* Ajustado para alinear con el texto */
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
   background: var(--color);
-  transition: width 0.3s ease; /* La animación ocurre al cambiar el ancho */
+  transition: width 0.3s ease;
+}
+header nav .list-darkmode-menu .language-dropdown {
+  position: relative;
+  font-size: 14px;
+  color: var(--first);
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header nav .list-darkmode-menu .language-dropdown button.language-current {
+  background: none;
+  border: none;
+  color: var(--color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: none;
+}
+header nav .list-darkmode-menu .language-dropdown button.language-current:hover {
+  color: var(--color);
+  cursor: pointer;
+}
+header nav .list-darkmode-menu .language-dropdown ul.language-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  padding: 6px 0;
+  list-style: none;
+  min-width: 70px;
+  z-index: 10;
+}
+header nav .list-darkmode-menu .language-dropdown ul.language-list.show {
+  display: block;
+}
+header nav .list-darkmode-menu .language-dropdown ul.language-list li a {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: var(--first);
+  text-decoration: none;
+  transition: none;
+}
+header nav .list-darkmode-menu .language-dropdown ul.language-list li a:hover {
+  color: var(--color);
+}
+header nav .list-darkmode-menu .language-dropdown ul.language-list li a::before, header nav .list-darkmode-menu .language-dropdown ul.language-list li a::after {
+  display: none;
+  content: none;
+}
+header nav .list-darkmode-menu .language-dropdown:hover ul.language-list {
+  display: block;
 }
 header nav .mode {
   color: var(--text-color);

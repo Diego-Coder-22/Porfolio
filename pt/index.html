@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Desenvolvedor Frontend | Diego Fernández Portfolio</title>
+    <meta name="description" content="Portfólio profissional de Diego Fernández, desenvolvedor frontend especializado em HTML, CSS, JavaScript, React e design gráfico." />
+    <meta property="og:title" content="Diego Fernández | Portfolio" />
+    <meta property="og:description" content="Descubra os projetos e habilidades de Diego Fernández, desenvolvedor frontend criativo e apaixonado por design." />
+    <meta property="og:url" content="https://porfolio-diego-projects.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="img/Favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../img/Favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="../scss/style.css" />
+    <script src="../js/scrollreveal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="alternate" hreflang="pt" href="https://porfolio-diego-projects.vercel.app/pt/" />
+</head>
+<body>
+    
+    <div class="loading" aria-hidden="true">
+        <div class="loading-bar"></div>
+    </div>
+
+    <header>
+        <div class="container-header">
+            <nav aria-label="Navegação principal">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../img/Logo.png" alt="Logo do portfólio de Diego Fernández" />
+                    </a>
+                </div>
+                <div class="list-darkmode-menu menu-btn">
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#about-me">Sobre mim</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#project">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+
+                    <!-- Seletor de idioma simples -->
+                    <div class="language-dropdown">
+                        <button class="language-current">PT</button>
+                        <ul class="language-list">
+                          <li><a href="../en/index.html">EN</a></li>
+                          <li><a href="../index.html">ES</a></li>
+                        </ul>
+                    </div>
+
+                    <label class="mode">
+                        <input type="checkbox" checked id="darkModeButton" />
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </label>
+                    <button class="hamburger">
+                        <div class="bar"></div>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="container">
+            <div class="home-info">
+                <div class="left">
+                    <h3 class="left-hi">Olá, eu sou</h3>
+                    <h1>Diego Fernández</h1>
+                    <h4>Sou <span class="multiple"></span></h4>
+                    <p class="left-p">
+                        Sou um apaixonado desenvolvedor Frontend focado em transformar conceitos de design em experiências web atraentes e interativas. Domino tecnologias essenciais como HTML, CSS, JavaScript e React, e atualmente estou ampliando minhas habilidades para o desenvolvimento Backend, com o objetivo de me tornar um desenvolvedor Fullstack. Minha meta é criar soluções web completas que combinem design intuitivo e funcionalidade robusta.
+                    </p>
+                    <div class="btn">
+                        <div class="btn-left">
+                            <a href="mailto: diego.fnicolini@gmail.com" class="btn-accent">Contate-me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="profile">
+                        <img src="../img/Diego Fernandez Developer-01.png" alt="Foto de Diego Fernández - Desenvolvedor frontend" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<main id="main">
+
+    <section id="about-me">
+        <div class="container">
+            <div class="row">
+                <div class="inner-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Sobre mim</h2>
+                    </div>
+                    <div class="person-information">
+                        <div class="description">
+                            <p>Olá, sou Diego, um apaixonado Desenvolvedor Frontend nascido em Montevidéu, Uruguai, e atualmente vivendo em Granada, Espanha.</p><br>                           
+                            <p>Trabalho como <strong>Designer Gráfico</strong>, liderando uma equipe de três designers para atender às necessidades dos nossos clientes com criatividade e precisão. Anteriormente, desempenhei um papel semelhante na <strong>BigPrints</strong>, Uruguai, onde adquiri valiosa experiência em design gráfico e atenção aos detalhes.</p><br>                              
+                            <p>Nos últimos dois anos, decidi mudar minha carreira e me dedicar ao desenvolvimento web. Completei meus estudos como <strong>Desenvolvedor Frontend</strong> e atualmente estou ampliando meus conhecimentos em <strong>Backend</strong>. Essa jornada me permitiu combinar minha experiência em design gráfico com habilidades técnicas para oferecer soluções completas e funcionais.</p><br>                              
+                            <p>Adoro trabalhar em equipe, aprender constantemente e enfrentar desafios que me tirem da zona de conforto.</p><br>                                                         
+                            <div class="btn">
+                                <div class="btn-wrap">
+                                    <a href="mailto: diego.fnicolini@gmail.com" class="btn-accent">Contate-me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="inner-content">
+                    <div class="section-skills">
+                        <h2 class="section-title">Habilidades</h2>
+
+                        <div class="skills-row">
+                            <div class="skills-column">
+                                <h3 class="title">Código</h3>
+
+                                <div class="skills-box">
+                                    <div class="skills-content">
+                                        <div class="progress">
+                                            <h3>HTML <span>90%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>CSS <span>90%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>JavaScript <span>80%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>React <span>80%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skills-column-2">
+                                <h3 class="title">Design</h3>
+
+                                <div class="skills-box">
+                                    <div class="skills-content">
+                                        <div class="progress">
+                                            <h3>Photoshop <span>85%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>Illustrator <span>90%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>InDesign <span>75%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <h3>CorelDraw <span>80%</span></h3>
+                                            <div class="bar"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logos">
+                            <div class="logos-slide">
+                                <img src="../img/HTML5-01.svg" alt="Logo do HTML5" class="colored" />
+                                <img src="../img/CSS3.svg" alt="Logo do CSS3" class="colored" />
+                                <img src="../img/Sass.svg" alt="Logo do Sass" class="colored" />
+                                <img src="../img/Bootstrap.svg" alt="Logo do Bootstrap" class="colored" />
+                                <img src="../img/GitHub.svg" alt="Logo do GitHub" class="colored" />
+                                <img src="../img/JavaScript.svg" alt="Logo do JavaScript" class="colored" />
+                                <img src="../img/React.svg" alt="Logo do React" class="colored" />
+                                <img src="../img/Photoshop.svg" alt="Logo do Photoshop" class="colored" />
+                                <img src="../img/Illustrator.svg" alt="Logo do Illustrator" class="colored" />
+                                <img src="../img/InDesign.svg" alt="Logo do InDesign" class="colored" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="project">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projetos</h2>
+                <p class="section-subtitle">Estes são alguns dos projetos em que trabalhei, combinando design e desenvolvimento.</p>
+            </div>
+            <div class="project-grid">
+                <!-- Card 1 -->
+                <div class="project-card">
+                    <img src="../img/Porfolio_.png" loading="lazy" alt="Prévia do site pessoal de Diego Fernández" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Título:</h3>
+                        <p class="project-title-description">Portfólio Pessoal</p>
+                        <p class="project-description">Um site pessoal que mostra minhas habilidades e projetos anteriores, combinando design moderno com tecnologia de desenvolvimento web.</p>
+                        <h4 class="project-subtitle">Tecnologias utilizadas:</h4>
+                        <ul class="project-skills">
+                            <li class="skill" data-tooltip="HTML"><img src="../img/logo-html.png" alt="HTML"></li>
+                            <li class="skill" data-tooltip="CSS"><img src="../img/logo-css.png" alt="CSS"></li>
+                            <li class="skill" data-tooltip="Sass"><img src="../img/logo-sass.png" alt="Sass"></li>
+                            <li class="skill" data-tooltip="JavaScript"><img src="../img/logo-javascript.png" alt="JavaScript"></li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="https://diegofdez.com/" target="_blank" class="btn-accent">Ver Site</a>
+                            <a href="https://github.com/Diego-Coder-22/Porfolio" target="_blank" class="btn-accent">Ver Repositório</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="project-card">
+                    <img src="../img/JPWEB.png" loading="lazy" alt="Prévia do site JP Team Jiu Jitsu desenvolvido por Diego Fernández" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Título:</h3>
+                        <p class="project-title-description">JP Team</p>
+                        <p class="project-description">JP Jiu Jitsu precisava de um design moderno para atrair novos alunos e membros. Desenvolvi um site intuitivo para melhorar sua presença online.</p>
+                        <h4 class="project-subtitle">Tecnologias utilizadas:</h4>
+                        <ul class="project-skills">
+                            <li class="skill" data-tooltip="HTML"><img src="../img/logo-html.png" alt="HTML"></li>
+                            <li class="skill" data-tooltip="CSS"><img src="../img/logo-css.png" alt="CSS"></li>
+                            <li class="skill" data-tooltip="JavaScript"><img src="../img/logo-javascript.png" alt="JavaScript"></li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="https://jpcamposbjj.com/" target="_blank" class="btn-accent">Ver Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="inner-content">
+                    <h2 class="work-title">Vamos Trabalhar Juntos</h2>
+                    <p>Estou aberto para ouvir você.<br>Tem algum projeto que gostaria de desenvolver?<br>Fique à vontade para entrar em contato.</p>
+                    <div class="btn">
+                        <a href="mailto: diego.fnicolini@gmail.com" class="btn-accent">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </main>
+    
+    <button class="button-to-top" onclick="scrollToTop()" aria-label="Voltar ao topo">⬆</button>
+    <div id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="inner-content">
+                    <div class="grid">
+                        <div class="copyright">
+                            <p>© 2025 Diego Fernández. Todos os direitos reservados (Eles sempre dizem isso aqui)</p>
+                        </div>
+                        <div class="social-footer">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/diego-fernandez-dev/" target="_blank"><i aria-label="Linkedin" class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="https://github.com/Diego-Coder-22" target="_blank"><i aria-label="GitHub" class="fa-brands fa-github"></i></a></li>
+                                <li><a href="mailto: diego.fnicolini@gmail.com" target="_blank"><i aria-label="Email" class="fa-solid fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+
+<script src="../js/my-gsap-v14.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
