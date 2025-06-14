@@ -604,6 +604,15 @@ header {
                         }
                     }
                 }
+                .language-dropdown {
+                    button.language-current {
+                      background: none !important;
+                    }
+                    ul.language-list {
+                      background: none !important;
+                      box-shadow: none !important; /* Por si tiene sombra */
+                    }
+                  }
             }
         }
     }

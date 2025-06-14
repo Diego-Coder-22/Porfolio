@@ -87,21 +87,17 @@ const typed = new Typed(".multiple", {
   loop: true,
 });
 
-// Language dropdown toggle (para mobile)
 const languageDropdown = document.querySelector(".language-dropdown");
 const languageButton = languageDropdown?.querySelector(".language-current");
 const languageList = languageDropdown?.querySelector(".language-list");
 
 languageButton?.addEventListener("click", (e) => {
-    e.stopPropagation(); // Evita que se cierre al hacer click dentro
+    e.stopPropagation();
     languageList.classList.toggle("show");
 });
 
-// Cerrar al hacer click fuera
-document.addEventListener("click", (e) => {
-    if (!languageDropdown.contains(e.target)) {
-        languageList?.classList.remove("show");
-    }
+document.addEventListener("click", () => {
+    languageList.classList.remove("show");
 });
 
 //slide

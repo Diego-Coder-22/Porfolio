@@ -496,6 +496,13 @@ header nav .hamburger.active .bar {
   header nav .list-darkmode-menu ul li a {
     font-size: 20px;
   }
+  header nav .list-darkmode-menu .language-dropdown button.language-current {
+    background: none !important;
+  }
+  header nav .list-darkmode-menu .language-dropdown ul.language-list {
+    background: none !important;
+    box-shadow: none !important; /* Por si tiene sombra */
+  }
   .home {
     padding: 30px;
   }
